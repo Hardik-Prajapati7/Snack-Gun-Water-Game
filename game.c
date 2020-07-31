@@ -1,3 +1,5 @@
+//created By Hardik 
+
 # include <stdio.h>
 # include <stdlib.h>
 # include <time.h>
@@ -34,6 +36,10 @@ int snackWaterGun(char you, char comp){
     else if(you=='w' && comp=='g'){
         return 1;
     }
+else{
+	printf("▬ Please Select In Above Options ▬");
+	printf("▬ Only Play If You Know How To Play This Game  ▬");
+}
     
 
 
@@ -45,7 +51,7 @@ int main(){
      int number;
     srand(time(0));
     number=rand()%100+1;
-    printf("Number is %d",number);
+    //printf("Number is %d",number);
 
     if(number<33){
         comp='s';
@@ -56,18 +62,18 @@ int main(){
     else{
         comp='g';
     }
-    printf("Enter 's' for Snack , 'w' for water and 'g' for gu\n");
+    printf("▬ Enter 's' for Snack , 'w' for water and 'g' for gun ▬\n");
     scanf("%c",&you);
     int result=snackWaterGun(you,comp);
      printf("You choose %c and computer choose %c",you , comp);
     if(result==0){
-        printf("  Game Drow\n");
+        printf("  ▬ Game Drow ▬\n");
     }
     else if(result==1){
-        printf(" You Win \n");
+        printf(" ▬ You Win ▬ \n");
     }
     else{
-        printf(" You Lose \n");
+        printf("  ▬ You Lose ▬ \n");
     }
    
     return 0;
